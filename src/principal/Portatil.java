@@ -8,12 +8,12 @@ public class Portatil {
 
     protected String marca;
     protected Modelo modelo;
-    protected int nSerie;
+    protected int nSerie=0;
 
-    public Portatil(Modelo modelo, int nSerie){
+    public Portatil(Modelo modelo){
 
         marca="HP";
-        this.nSerie=nSerie;
+        nSerie++;
         this.modelo=modelo;
 
     }
@@ -32,5 +32,11 @@ public class Portatil {
 
     public void setModelo(Modelo modelo) {
         this.modelo = modelo;
+    }
+
+
+    @Override
+    public String toString() {
+        return "portatil modelo " + modelo + " con numero de serie: " + this.nSerie;
     }
 }

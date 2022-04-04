@@ -5,11 +5,11 @@ public abstract class Empleados {
     protected String nombre;
     protected String apellidos;
     protected String dni;
-    protected String antiguedad;
+    protected int antiguedad;
     protected int telefeno;
     protected double salario;
 
-    public Empleados(String nombre, String apellidos, String dni, String antiguedad, int telefeno, double salario) {
+    public Empleados(String nombre, String apellidos, String dni, int antiguedad, int telefeno, double salario) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.dni = dni;
@@ -19,7 +19,7 @@ public abstract class Empleados {
     }
 
     public abstract void incrementarSalario();
-
+    public abstract void impresion();
 
 
 
@@ -47,11 +47,11 @@ public abstract class Empleados {
         this.dni = dni;
     }
 
-    public String getAntiguedad() {
+    public int getAntiguedad() {
         return antiguedad;
     }
 
-    public void setAntiguedad(String antiguedad) {
+    public void setAntiguedad(int antiguedad) {
         this.antiguedad = antiguedad;
     }
 
@@ -70,4 +70,6 @@ public abstract class Empleados {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+
 }
